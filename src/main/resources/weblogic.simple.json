@@ -1,0 +1,16 @@
+{
+  "test_scenario": [
+    {
+      "name": "Arbitrary Endpoint Tests",
+      "socket_endpoint": [
+        {
+          "host": "google.com",
+          "proto": "ssl",
+          "port": "443",
+          "request": "GET https://www.google.com/ HTTP/1.0\r\n",
+          "expects": "Google"
+        }
+      ]
+    }
+  ]
+}

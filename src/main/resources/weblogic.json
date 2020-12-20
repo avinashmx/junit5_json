@@ -1,0 +1,66 @@
+{
+  "test_scenario": [
+    {
+      "name": "Weblogic Admin Console",
+      "socket_endpoint": [
+        {
+          "host": "localhost",
+          "proto": "ssl",
+          "port": "7012",
+          "request": "GET https://localhost:7012/console/login/LoginForm.jsp HTTP/1.0\\n",
+          "expects": "something"
+        },
+        {
+          "host": "localhost",
+          "proto": "ssl",
+          "port": "7012",
+          "request": "GET https://localhost:7012/console/login/LoginForm.jsp HTTP/1.0\\n",
+          "expects": "something"
+        }
+      ],
+      "http_scrape": [
+        {
+          "xpath": "/herp/derp",
+          "expects": "somewebappstring",
+          "message": "Test Combobox"
+        },
+        {
+          "xpath": "/qrs/tuv",
+          "expects": "somewebappstring2",
+          "message": "Test Combobox2"
+        }
+      ]
+    },
+    {
+      "name": "Wedblogic Admin Console",
+      "socket_endpoint": [
+        {
+          "host": "localhost",
+          "proto": "ssl",
+          "port": "7012",
+          "request": "GET https://localhost:7012/console/login/LoginForm.jsp HTTP/1.0\n",
+          "expects": "someting"
+        },
+        {
+          "host": "localhost",
+          "proto": "ssl",
+          "port": "7012",
+          "request": "GET https://localhost:7012/console/login/LoginForm.jsp HTTP/1.0\n",
+          "expects": "someting"
+        }
+      ],
+      "http_scrape": [
+        {
+          "xpath": "/dur/hur",
+          "expects": "somewebappstring",
+          "message": "Test Combobox"
+        },
+        {
+          "xpath": "/dur/hur2",
+          "expects": "somewebappstring2",
+          "message": "Test Combobox2"
+        }
+      ]
+    }
+  ]
+}
