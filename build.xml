@@ -1,0 +1,34 @@
+<project>
+
+
+    <path id="junit.platform.libs.classpath">
+        <!--       <file name="${basedir}/junit-platform-console-standalone-1.7.0-all.jar"/>-->
+        <pathelement location="junit-platform-console-standalone-1.7.0-all.jar"/>
+    </path>
+
+
+    <target name="test">
+        <junitlauncher>
+            <!-- include the JUnit platform related libraries
+            required to run the tests -->
+            <classpath refid="junit.platform.libs.classpath"/>
+
+
+            <classpath>
+                <!-- the test classes themselves -->
+                <pathelement location="target/junit_scenario-1.0-SNAPSHOT-jar-with-dependencies.jar"/>
+            </classpath>
+            <test name="JSONDynamicTest" outputdir="output" includeengines="junit-vintage">
+<!--                                <listener type="legacy-brief" sendSysOut="true"/>-->
+                                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>
+            </test>
+
+            <!--            <testclasses outputdir="output">-->
+<!--                <test name="org.myapp.SimpleTest"/>-->
+<!--                <listener type="legacy-brief" sendSysOut="true"/>-->
+<!--                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>-->
+
+<!--            </testclasses>-->
+        </junitlauncher>
+    </target>
+</project>
