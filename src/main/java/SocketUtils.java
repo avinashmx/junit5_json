@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020, Avinash Ramana, All rights reserved.
+ */
+
 import javax.net.ssl.*;
 import java.io.*;
 import java.security.cert.X509Certificate;

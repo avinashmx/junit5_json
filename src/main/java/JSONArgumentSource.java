@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020, Avinash Ramana, All rights reserved.
+ */
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.extension.ExtensionContext;

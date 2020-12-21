@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020, Avinash Ramana, All rights reserved.
+ */
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,7 +41,11 @@ public class JSONDynamicTest {
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
-            test_scenario = test_scenario_Node.get("name").asText();
+            if (test_scenario_Node != null) {
+                test_scenario = test_scenario_Node.get("name").asText();
+            }else{
+                Assertions.fail("Missing name element");
+            }
             test_scenario_Node.get("socket_endpoint").elements().forEachRemaining(socket_endpoint -> {
                 System.out.println(socket_endpoint);
                 final String hostname = socket_endpoint.get("host").asText();

@@ -1,3 +1,7 @@
+/*
+ * Copyright 2020, Avinash Ramana, All rights reserved.
+ */
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
