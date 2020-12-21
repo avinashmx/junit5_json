@@ -33,7 +33,6 @@ public class JSONDynamicTest {
         }
 
         scenarios.stream().forEach(s -> {
-            System.out.println("Test Scenario " + s);
             String test_scenario = null;
             JsonNode test_scenario_Node = null;
             try {
@@ -47,7 +46,6 @@ public class JSONDynamicTest {
                 Assertions.fail("Missing name element");
             }
             test_scenario_Node.get("socket_endpoint").elements().forEachRemaining(socket_endpoint -> {
-                System.out.println(socket_endpoint);
                 final String hostname = socket_endpoint.get("host").asText();
                 final String proto = socket_endpoint.get("proto").asText();
                 final String port = socket_endpoint.get("port").asText();
@@ -57,7 +55,6 @@ public class JSONDynamicTest {
                     String output = null;
                     try {
                         output = SocketUtils.testSSL(hostname, Integer.parseInt(port), false, request);
-                        System.out.println(output);
                         Assertions.assertTrue(output.contains(expects), "Contains " + expects);
                     } catch (Exception e) {
                         e.printStackTrace();
