@@ -2,7 +2,8 @@
  * Copyright 2020, Avinash Ramana, All rights reserved.
  */
 
-import com.fasterxml.jackson.databind.JsonNode;
+package com.gent00.junit5;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,7 +11,6 @@ import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.support.AnnotationConsumer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;

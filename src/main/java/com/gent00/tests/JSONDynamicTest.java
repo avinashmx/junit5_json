@@ -2,9 +2,12 @@
  * Copyright 2020, Avinash Ramana, All rights reserved.
  */
 
+package com.gent00.tests;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gent00.junit5.inet.SocketUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DynamicContainer;
 import org.junit.jupiter.api.DynamicTest;
@@ -42,7 +45,7 @@ public class JSONDynamicTest {
             }
             if (test_scenario_Node != null) {
                 test_scenario = test_scenario_Node.get("name").asText();
-            }else{
+            } else {
                 Assertions.fail("Missing name element");
             }
             test_scenario_Node.get("socket_endpoint").elements().forEachRemaining(socket_endpoint -> {
@@ -55,6 +58,7 @@ public class JSONDynamicTest {
                     String output = null;
                     try {
                         output = SocketUtils.testSSL(hostname, Integer.parseInt(port), false, request);
+                        System.out.println(output);
                         Assertions.assertTrue(output.contains(expects), "Contains " + expects);
                     } catch (Exception e) {
                         e.printStackTrace();

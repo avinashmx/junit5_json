@@ -2,6 +2,8 @@
  * Copyright 2020, Avinash Ramana, All rights reserved.
  */
 
+package com.gent00.junit5.inet;
+
 import javax.net.ssl.*;
 import java.io.*;
 import java.security.cert.X509Certificate;

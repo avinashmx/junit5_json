@@ -18,17 +18,17 @@
                 <!-- the test classes themselves -->
                 <pathelement location="target/junit_scenario-1.0-SNAPSHOT-jar-with-dependencies.jar"/>
             </classpath>
-            <test name="JSONDynamicTest" outputdir="output" includeengines="junit-vintage">
-<!--                                <listener type="legacy-brief" sendSysOut="true"/>-->
-                                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>
+            <test name="com.gent00.tests.JSONDynamicTest" outputdir="output" includeengines="junit-vintage">
+                <!--                                <listener type="legacy-brief" sendSysOut="true"/>-->
+                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>
             </test>
 
             <!--            <testclasses outputdir="output">-->
-<!--                <test name="org.myapp.SimpleTest"/>-->
-<!--                <listener type="legacy-brief" sendSysOut="true"/>-->
-<!--                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>-->
+            <!--                <test name="org.myapp.SimpleTest"/>-->
+            <!--                <listener type="legacy-brief" sendSysOut="true"/>-->
+            <!--                <listener type="legacy-xml" sendSysErr="true" sendSysOut="true"/>-->
 
-<!--            </testclasses>-->
+            <!--            </testclasses>-->
         </junitlauncher>
     </target>
 </project>

@@ -2,6 +2,9 @@
  * Copyright 2020, Avinash Ramana, All rights reserved.
  */
 
+package com.gent00.tests;
+
+import com.gent00.junit5.JSONLiteralSource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -16,13 +19,13 @@ public class JSONStaticTest {
     }
 
     @Test
-    public void testDog1(){
-        Assertions.assertTrue("Dog".length()== 3);
+    public void testDog1() {
+        Assertions.assertTrue("Dog".length() == 3);
     }
 
     @Test
-    public void testGod1(){
-        Assertions.assertTrue("God".length()== 3);
+    public void testGod1() {
+        Assertions.assertTrue("God".length() == 3);
     }
 
 }
