@@ -28,7 +28,7 @@ public class JSONDynamicTest {
         List<DynamicContainer> dynamicContainers = new ArrayList<>();
         List<DynamicTest> dynamicTests = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = mapper.readTree(new File("/Users/avinash/Repos/junit_scenario/src/main/resources/weblogic.simple.json"));
+        JsonNode node = mapper.readTree(JSONDynamicTest.class.getResourceAsStream("/weblogic.simple.json"));
         Iterator<JsonNode> testScenario = node.findValue("test_scenario").elements();
         List<String> scenarios = new ArrayList<>();
         while (testScenario.hasNext()) {
@@ -69,9 +69,7 @@ public class JSONDynamicTest {
                 dynamicTests.add(dynamicTest);
             });
 
-
             dynamicContainers.add(DynamicContainer.dynamicContainer(test_scenario, dynamicTests));
-
 
         });
         return dynamicContainers.stream();

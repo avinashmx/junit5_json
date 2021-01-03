@@ -31,8 +31,21 @@ public class SocketUtils {
                 .createSocket(host, port);
         sslsocket.setKeepAlive(true);
         sslsocket.setUseClientMode(true);
-        sslsocket.setEnabledProtocols(new String[]{"TLSv1.2"});
-        sslsocket.setEnabledCipherSuites(new String[]{"TLS_RSA_WITH_AES_128_CBC_SHA"});
+//        sslsocket.setEnabledProtocols(new String[]{"TLSv1.2"});
+//        sslsocket.setEnabledCipherSuites(
+//                new String[]{
+//                        "SSL_DH_anon_EXPORT_WITH_RC4_40_MD5",
+//                        "SSL_DH_anon_WITH_RC4_128_MD5",
+//                        "SSL_RSA_EXPORT_WITH_RC4_40_MD5",
+//                        "SSL_RSA_WITH_RC4_128_MD5",
+//                        "SSL_RSA_WITH_RC4_128_SHA",
+//                        "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA",
+//                        "TLS_ECDHE_RSA_WITH_RC4_128_SHA",
+//                        "TLS_ECDH_ECDSA_WITH_RC4_128_SHA",
+//                        "TLS_ECDH_RSA_WITH_RC4_128_SHA",
+//                        "TLS_ECDH_anon_WITH_RC4_128_SHA",
+//                }
+//        );
         sslsocket.startHandshake();
         StringBuilder outputLines = new StringBuilder();
         try (PrintWriter socketClientWriter = new PrintWriter(new BufferedWriter(new OutputStreamWriter(sslsocket.getOutputStream())));
